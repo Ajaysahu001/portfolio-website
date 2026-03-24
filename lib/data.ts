@@ -78,8 +78,8 @@ export const projects = [
     color: "from-violet-600 to-indigo-600",
     accentColor: "violet",
     icon: "✦",
-    link: "#",
-    github: "#",
+    link: "https://www.myeasymonogram.com",
+    github: "https://github.com/Ajaysahu001",
     highlights: [
       "Redux state management",
       "Real-time data APIs",
@@ -100,8 +100,8 @@ export const projects = [
     color: "from-cyan-600 to-blue-600",
     accentColor: "cyan",
     icon: "◈",
-    link: "#",
-    github: "#",
+    link: "https://lucentinnovation.com",
+    github: "https://github.com/Ajaysahu001",
     highlights: [
       "Next.js App Router",
       "SSR & SSG",
@@ -122,8 +122,8 @@ export const projects = [
     color: "from-emerald-600 to-teal-600",
     accentColor: "emerald",
     icon: "⬡",
-    link: "#",
-    github: "#",
+    link: "https://revidd.com",
+    github: "https://github.com/Ajaysahu001",
     highlights: [
       "Context API",
       "Lazy loading",

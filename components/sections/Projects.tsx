@@ -54,7 +54,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         {/* Top gradient bar */}
         <div className={`h-1 w-full bg-gradient-to-r ${project.color}`} aria-hidden="true" />
 
-        <div className="p-8" style={{ transform: "translateZ(20px)" }}>
+        <div className="p-8">
           {/* Card header */}
           <header className="flex items-start justify-between mb-6">
             <div className="flex items-center gap-3">
@@ -195,10 +195,6 @@ export default function Projects() {
       className="relative py-32 overflow-hidden bg-[#060608]"
       aria-labelledby="projects-heading"
     >
-      <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_30%_50%,rgba(99,102,241,0.05),transparent)]"
-        aria-hidden="true"
-      />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
