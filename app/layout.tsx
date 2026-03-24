@@ -8,6 +8,8 @@ import CustomCursor from "@/components/ui/CustomCursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
 import { siteConfig } from "@/lib/seo";
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // ─── Font optimisation ───────────────────────────────────────────────────────
 const inter = Inter({
@@ -149,7 +151,9 @@ export default function RootLayout({
 
           <CustomCursor />
           <ScrollProgress />
-
+          <Analytics />
+          <SpeedInsights />
+          
           <header>
             <Navbar />
           </header>

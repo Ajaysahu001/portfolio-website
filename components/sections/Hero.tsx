@@ -126,7 +126,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300 text-sm font-medium mb-8 backdrop-blur-sm"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/30 bg-violet-500/10 text-violet-300 text-sm font-medium mt-20 xl:mt-10 mb-8 backdrop-blur-sm"
         >
           <motion.span
             animate={{ scale: [1, 1.3, 1] }}
@@ -143,7 +143,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mb-4"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none">
             <span className="block text-white" itemProp="name">Ajay</span>
             <span className="block bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Sahu

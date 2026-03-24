@@ -88,8 +88,8 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </div>
             </div>
 
-            {/* Action links */}
-            <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {/* Action links — always visible on touch devices, hover-reveal on pointer devices */}
+            <div className="flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
               <motion.a
                 href={project.github}
                 whileHover={{ scale: 1.1, y: -2 }}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 
@@ -13,6 +14,10 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -27,6 +32,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
+      if (!isHome) return;
       const sections = navLinks.map((l) => l.href.replace("#", ""));
       for (const section of sections.reverse()) {
         const el = document.getElementById(section);
@@ -39,12 +45,32 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHome]);
 
-  const scrollTo = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+  // Close mobile menu whenever route changes
+  useEffect(() => {
     setMobileOpen(false);
+    setActiveSection("");
+  }, [pathname]);
+
+  const handleNavClick = (href: string) => {
+    setMobileOpen(false);
+    if (isHome) {
+      // Already on home — smooth scroll to section
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // On another page — navigate to home then jump to section
+      router.push(`/${href}`);
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push("/");
+    }
   };
 
   return (
@@ -63,10 +89,11 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <motion.button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={handleLogoClick}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="relative group"
+            aria-label="Go to home"
           >
             <span className="text-2xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               AS
@@ -83,30 +110,29 @@ export default function Navbar() {
           <ul className="hidden md:flex items-center gap-1" role="list">
             {navLinks.map((link) => {
               const sectionId = link.href.replace("#", "");
-              const isActive = activeSection === sectionId;
+              const isActive = isHome && activeSection === sectionId;
               return (
                 <li key={link.label}>
-                <motion.button
-                  key={`btn-${link.label}`}
-                  onClick={() => scrollTo(link.href)}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    isActive
-                      ? "text-white dark:text-white"
-                      : "text-slate-600 dark:text-white/60 hover:text-slate-900 dark:hover:text-white"
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-pill"
-                      className="absolute inset-0 rounded-full bg-white/10 border border-white/10"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10">{link.label}</span>
-                </motion.button>
-              </li>
+                  <motion.button
+                    onClick={() => handleNavClick(link.href)}
+                    className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                      isActive
+                        ? "text-white dark:text-white"
+                        : "text-slate-600 dark:text-white/60 hover:text-slate-900 dark:hover:text-white"
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-pill"
+                        className="absolute inset-0 rounded-full bg-white/10 border border-white/10"
+                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                    <span className="relative z-10">{link.label}</span>
+                  </motion.button>
+                </li>
               );
             })}
           </ul>
@@ -142,6 +168,8 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
               className="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1.5"
             >
               <motion.span
@@ -174,7 +202,7 @@ export default function Navbar() {
             {navLinks.map((link, i) => (
               <motion.button
                 key={link.label}
-                onClick={() => scrollTo(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.07 }}
