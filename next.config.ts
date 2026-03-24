@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // ── Package import optimisation (tree-shake large libs) ─────────────────────
+  experimental: {
+    optimizePackageImports: ["framer-motion", "@vercel/analytics", "@vercel/speed-insights"],
+  },
+
   // ── Turbopack root (silences workspace-root detection warning) ───────────────
   turbopack: {
     root: __dirname,

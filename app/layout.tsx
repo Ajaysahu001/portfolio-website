@@ -17,14 +17,16 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  adjustFontFallback: true, // reduces CLS by sizing the fallback font to match Inter
   fallback: ["system-ui", "sans-serif"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
-  display: "swap",
-  preload: false, // only used for code snippets; defer loading
+  display: "optional", // never swaps in; eliminates CLS for a secondary font
+  preload: false,
+  adjustFontFallback: true,
   fallback: ["Menlo", "Monaco", "Consolas", "monospace"],
 });
 
@@ -151,9 +153,7 @@ export default function RootLayout({
 
           <CustomCursor />
           <ScrollProgress />
-          <Analytics />
-          <SpeedInsights />
-          
+
           <header>
             <Navbar />
           </header>
@@ -163,6 +163,10 @@ export default function RootLayout({
           </main>
 
           <Footer />
+
+          {/* Analytics last — after all content, no render impact */}
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>

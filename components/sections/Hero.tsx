@@ -136,9 +136,9 @@ export default function Hero() {
           Available for new opportunities
         </motion.div>
 
-        {/* Name — h1 is the single page-level heading */}
+        {/* Name — h1 is the LCP element; keep opacity:1 so the browser measures it immediately */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 1, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="mb-4"
