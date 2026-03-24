@@ -138,6 +138,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en-IN" suppressHydrationWarning className="dark">
+      <head>
+        <meta name="google-site-verification" content="uviTmwE-OKPRdP7-cmjnVVW3IJOBuulVvITiunV73fs" />
+      </head>
       <body suppressHydrationWarning className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
         <ThemeProvider>
           {/* Skip navigation — keyboard / screen-reader accessibility */}
