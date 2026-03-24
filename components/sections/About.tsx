@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import { personalInfo, stats, education } from "@/lib/data";
@@ -31,6 +31,9 @@ const StatCard = ({ stat, index }: { stat: typeof stats[0]; index: number }) => 
 );
 
 export default function About() {
+  // Stable badge durations — useMemo prevents Math.random() re-running each render
+  const badgeDurations = useMemo(() => [3.4, 4.1, 3.7], []);
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], [60, -60]);
@@ -83,11 +86,11 @@ export default function About() {
                   { label: "React.js", pos: "top-0 -right-4", color: "from-blue-500 to-cyan-500" },
                   { label: "Next.js", pos: "bottom-8 -left-4", color: "from-violet-500 to-purple-500" },
                   { label: "2+ Years", pos: "-bottom-4 right-8", color: "from-emerald-500 to-teal-500" },
-                ].map((badge) => (
+                ].map((badge, bi) => (
                   <motion.div
                     key={badge.label}
                     animate={{ y: [0, -8, 0] }}
-                    transition={{ duration: 3 + Math.random() * 2, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: badgeDurations[bi], repeat: Infinity, ease: "easeInOut" }}
                     className={`absolute ${badge.pos} px-3 py-1.5 rounded-full bg-gradient-to-r ${badge.color} text-white text-xs font-bold shadow-lg`}
                   >
                     {badge.label}

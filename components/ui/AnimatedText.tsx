@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 interface AnimatedTextProps {
   text: string;
@@ -20,7 +20,7 @@ export function AnimatedWords({ text, className = "", delay = 0, once = true }: 
     }),
   };
 
-  const child = {
+  const child: Variants = {
     visible: {
       opacity: 1,
       y: 0,
@@ -57,7 +57,7 @@ export function AnimatedLetters({ text, className = "", delay = 0, once = true }
     },
   };
 
-  const child = {
+  const child: Variants = {
     hidden: { opacity: 0, y: 20, rotateX: -90 },
     visible: {
       opacity: 1,

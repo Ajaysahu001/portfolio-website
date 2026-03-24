@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // ── Turbopack root (silences workspace-root detection warning) ───────────────
+  turbopack: {
+    root: __dirname,
+  },
+
   // ── Image optimisation ──────────────────────────────────────────────────────
   images: {
     // Serve modern formats (WebP/AVIF) automatically
@@ -34,13 +39,6 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()",
           },
-        ],
-      },
-      {
-        // Long-cache for static assets
-        source: "/_next/static/(.*)",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
       {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import MagneticButton from "@/components/ui/MagneticButton";
@@ -18,15 +18,18 @@ const FloatingOrb = ({ className }: { className: string }) => (
   />
 );
 
+// Stable particle data — generated once at module load, never recreated
+const PARTICLES = Array.from({ length: 40 }, (_, i) => ({
+  id: i,
+  x: (i * 2.5) % 100,
+  y: (i * 2.5 + 17) % 100,
+  size: (i % 3) + 1,
+  duration: 3 + (i % 5),
+  delay: (i * 0.37) % 5,
+}));
+
 const ParticleField = () => {
-  const particles = Array.from({ length: 60 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 2 + 1,
-    duration: Math.random() * 4 + 3,
-    delay: Math.random() * 5,
-  }));
+  const particles = PARTICLES;
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
