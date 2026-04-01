@@ -176,7 +176,7 @@ export default function Hero() {
           className="text-white/50 text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           Crafting pixel-perfect, performance-optimized web experiences with React & Next.js.
-          2+ years of turning complex ideas into elegant digital products.
+          3+ years of turning complex ideas into elegant digital products.
         </motion.p>
 
         {/* CTAs */}

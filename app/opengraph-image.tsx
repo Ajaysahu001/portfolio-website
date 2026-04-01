@@ -126,7 +126,7 @@ export default function Image() {
             marginBottom: 60,
           }}
         >
-          2+ years building high-performance web apps · Redux · TypeScript · Tailwind CSS
+          3+ years building high-performance web apps · Redux · TypeScript · Tailwind CSS
         </div>
 
         {/* Tech pills row */}

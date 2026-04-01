@@ -193,7 +193,7 @@ export default function Experience() {
               <div>
                 <h3 className="text-white font-bold text-xl mb-2">Ready for new challenges</h3>
                 <p className="text-white/50 text-sm max-w-md">
-                  2+ years of crafting exceptional web experiences. Currently open to exciting frontend roles.
+                  3+ years of crafting exceptional web experiences. Currently open to exciting frontend roles.
                 </p>
               </div>
               <motion.a

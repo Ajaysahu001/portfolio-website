@@ -85,7 +85,7 @@ export default function About() {
                 {[
                   { label: "React.js", pos: "top-0 -right-4", color: "from-blue-500 to-cyan-500" },
                   { label: "Next.js", pos: "bottom-8 -left-4", color: "from-violet-500 to-purple-500" },
-                  { label: "2+ Years", pos: "-bottom-4 right-8", color: "from-emerald-500 to-teal-500" },
+                  { label: "3+ Years", pos: "-bottom-4 right-8", color: "from-emerald-500 to-teal-500" },
                 ].map((badge, bi) => (
                   <motion.div
                     key={badge.label}

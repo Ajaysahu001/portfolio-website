@@ -3,7 +3,7 @@ export const personalInfo = {
   title: "Front-end Developer",
   tagline: "Crafting exceptional digital experiences",
   summary:
-    "Front-end Developer with 2+ years of experience in building dynamic and responsive web applications using React.js and Next.js. Expertise in performance optimization, state management, and API integration, delivering seamless user experiences.",
+    "Front-end Developer with 3+ years of experience in building dynamic and responsive web applications using React.js and Next.js. Expertise in performance optimization, state management, and API integration, delivering seamless user experiences.",
   email: "ajay.sahuchitrakoot@gmail.com",
   phone: "+91-8840418726",
   location: "Chitrakoot, M.P., India",
@@ -195,7 +195,7 @@ export const education = [
 ];
 
 export const stats = [
-  { label: "Years Experience", value: "2+", suffix: "" },
+  { label: "Years Experience", value: "3+", suffix: "" },
   { label: "Projects Completed", value: "15", suffix: "+" },
   { label: "Technologies", value: "12", suffix: "+" },
   { label: "Satisfied Clients", value: "10", suffix: "+" },
