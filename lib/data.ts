@@ -2,8 +2,9 @@ export const personalInfo = {
   name: "Ajay Sahu",
   title: "Front-end Developer",
   tagline: "Crafting exceptional digital experiences",
+  avatar: "",
   summary:
-    "Front-end Developer with 3+ years of experience in building dynamic and responsive web applications using React.js and Next.js. Expertise in performance optimization, state management, and API integration, delivering seamless user experiences.",
+    "Front-end Developer with 3+ years of experience building responsive and high-performance web applications using React.js and Next.js. Expertise in state management (Redux, Context API), RESTful API integration, and UI performance optimization. Delivered production-grade UIs across multiple live client products, working in Agile teams with designers and back-end developers.",
   email: "ajay.sahuchitrakoot@gmail.com",
   phone: "+91-8840418726",
   location: "Chitrakoot, M.P., India",
@@ -37,7 +38,7 @@ export const skills = [
     items: [
       { name: "React.js", level: 92 },
       { name: "Next.js", level: 88 },
-      { name: "Redux", level: 85 },
+      { name: "Redux Toolkit", level: 85 },
       { name: "Tailwind CSS", level: 90 },
       { name: "Bootstrap", level: 80 },
     ],
@@ -49,8 +50,10 @@ export const skills = [
     items: [
       { name: "RESTful APIs", level: 88 },
       { name: "Axios / Fetch", level: 90 },
+      { name: "Context API", level: 85 },
       { name: "Git / GitHub", level: 85 },
-      { name: "Webpack / Vite", level: 78 },
+      { name: "Figma", level: 80 },
+      { name: "Webpack / Vite / Babel", level: 78 },
     ],
   },
   {
@@ -60,7 +63,8 @@ export const skills = [
     items: [
       { name: "Lazy Loading", level: 88 },
       { name: "Code Splitting", level: 85 },
-      { name: "Performance Tuning", level: 82 },
+      { name: "Memoization", level: 84 },
+      { name: "SSR / SSG", level: 82 },
       { name: "Minification", level: 80 },
     ],
   },
@@ -71,20 +75,20 @@ export const projects = [
     title: "My Easy Monogram",
     slug: "my-easy-monogram",
     description:
-      "A responsive e-commerce web application for custom monogram products. Built with React.js and SCSS, featuring Redux for state management and real-time API integration for dynamic product data.",
+      "A responsive e-commerce web application for custom monogram products. Built with React.js and Redux Toolkit for state management, REST APIs for real-time data, and performance optimizations that reduced initial bundle size by ~30%.",
     longDescription:
-      "My Easy Monogram is a full-featured, responsive e-commerce platform built for custom monogram products. The application leverages React.js for a dynamic, component-driven UI paired with SCSS for maintainable, scalable styling. Redux powers centralized state management across the cart, product catalog, and user session, while RESTful API integration delivers real-time product data and order status updates. Performance was a core priority: lazy loading and code splitting ensure fast initial load times, and careful optimization of re-renders keeps the UI smooth on all devices.",
-    tech: ["React.js", "SCSS", "Redux", "REST APIs"],
+      "My Easy Monogram is a full-featured, responsive e-commerce platform built for custom monogram products. The application leverages React.js for a dynamic, component-driven UI paired with SCSS for maintainable, scalable styling. Redux Toolkit powers centralized state management across the cart, product catalog, and user session, while RESTful API integration delivers real-time product data and order status updates. Performance was a core priority: lazy loading and code splitting reduced the initial bundle size by ~30%, and memoization of expensive renders keeps the UI smooth on all devices.",
+    tech: ["React.js", "SCSS", "Redux Toolkit", "REST APIs"],
     color: "from-violet-600 to-indigo-600",
     accentColor: "violet",
     icon: "✦",
     link: "https://www.myeasymonogram.com",
     github: "https://github.com/Ajaysahu001",
     highlights: [
-      "Redux state management",
+      "Redux Toolkit state",
+      "~30% bundle reduction",
       "Real-time data APIs",
       "Responsive design",
-      "Performance optimized",
     ],
     keywords: ["React.js", "SCSS", "Redux", "e-commerce", "REST API", "responsive"],
     datePublished: "2024-06-01",
@@ -148,11 +152,11 @@ export const experience = [
     current: true,
     color: "from-violet-500 to-purple-600",
     description: [
-      "Designed dynamic UIs using React.js, enhancing user engagement across multiple product lines.",
-      "Utilized Redux and hooks for efficient state management and optimized component rendering.",
-      "Optimized performance with lazy loading, code splitting, and reduced unnecessary re-renders.",
-      "Collaborated with designers and back-end developers for seamless cross-functional integration.",
-      "Integrated RESTful APIs to display real-time data with smooth user interactions.",
+      "Built production-grade UIs using React.js and Next.js for multiple live client products.",
+      "Implemented Redux Toolkit and React hooks for scalable state management across 20+ components.",
+      "Applied lazy loading, code splitting, and memoization — reducing initial bundle size by ~30%.",
+      "Integrated 15+ RESTful APIs using Axios to render real-time data on interactive dashboards.",
+      "Worked in Agile/Scrum team with designers and back-end developers to ship features on schedule.",
     ],
   },
   {
@@ -165,10 +169,11 @@ export const experience = [
     current: false,
     color: "from-blue-500 to-cyan-500",
     description: [
-      "Built responsive web applications using React.js, improving accessibility and user interaction.",
-      "Leveraged React hooks for efficient state and side effect management across components.",
-      "Enhanced application performance by refactoring and optimizing rendering techniques.",
-      "Worked closely with cross-functional teams to create visually appealing and functional apps.",
+      "Developed 5+ fully responsive React.js apps with cross-browser compatibility across all devices.",
+      "Used React hooks (useState, useEffect, useCallback, useMemo) for state and side effect management.",
+      "Refactored legacy components, eliminating unnecessary re-renders and improving page load speed.",
+      "Converted Figma mockups into pixel-perfect UI components using Tailwind CSS and SCSS.",
+      "Integrated third-party APIs with async data fetching, error handling, and loading state management.",
     ],
   },
 ];
@@ -197,6 +202,6 @@ export const education = [
 export const stats = [
   { label: "Years Experience", value: "3+", suffix: "" },
   { label: "Projects Completed", value: "15", suffix: "+" },
-  { label: "Technologies", value: "12", suffix: "+" },
+  { label: "Technologies", value: "20", suffix: "+" },
   { label: "Satisfied Clients", value: "10", suffix: "+" },
 ];

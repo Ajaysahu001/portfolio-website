@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/ui/CustomCursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import { siteConfig } from "@/lib/seo";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -156,6 +157,7 @@ export default function RootLayout({
 
           <CustomCursor />
           <ScrollProgress />
+          <ScrollToTop />
 
           <header>
             <Navbar />

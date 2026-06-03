@@ -48,12 +48,16 @@ const techStack = [
   { name: "JavaScript", color: "#F7DF1E" },
   { name: "React.js", color: "#61DAFB" },
   { name: "Next.js", color: "#ffffff" },
-  { name: "Redux", color: "#764ABC" },
-  { name: "Tailwind", color: "#06B6D4" },
+  { name: "Redux Toolkit", color: "#764ABC" },
+  { name: "Tailwind CSS", color: "#06B6D4" },
   { name: "TypeScript", color: "#3178C6" },
+  { name: "Context API", color: "#61DAFB" },
   { name: "Git", color: "#F05032" },
+  { name: "Figma", color: "#F24E1E" },
   { name: "Vite", color: "#646CFF" },
+  { name: "Babel", color: "#F9DC3E" },
   { name: "SCSS", color: "#CC6699" },
+  { name: "Axios", color: "#5A29E4" },
   { name: "Bootstrap", color: "#7952B3" },
 ];
 

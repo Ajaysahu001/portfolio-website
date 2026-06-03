@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SectionReveal from "@/components/ui/SectionReveal";
 import { personalInfo, stats, education } from "@/lib/data";
@@ -78,7 +79,18 @@ export default function About() {
 
                 {/* Profile card */}
                 <div className="absolute inset-8 rounded-full bg-gradient-to-br from-violet-600/20 to-purple-600/20 border border-violet-500/20 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                  <span className="text-8xl select-none">👨‍💻</span>
+                  {personalInfo.avatar ? (
+                    <Image
+                      src={personalInfo.avatar}
+                      alt={personalInfo.name}
+                      fill
+                      className="object-cover rounded-full"
+                      sizes="256px"
+                      priority
+                    />
+                  ) : (
+                    <span className="text-8xl select-none">👨‍💻</span>
+                  )}
                 </div>
 
                 {/* Floating badges */}

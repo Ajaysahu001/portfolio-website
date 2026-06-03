@@ -202,6 +202,19 @@ export default function Hero() {
           </MagneticButton>
 
           <MagneticButton
+            href="/Ajay_3Exp_React_Resume.pdf"
+            download
+            className="group relative px-8 py-4 rounded-full border border-violet-500/40 bg-violet-500/10 text-violet-300 font-semibold text-base hover:bg-violet-500/20 hover:border-violet-400 hover:text-white transition-all duration-300"
+          >
+            <span className="flex items-center gap-2">
+              Download CV
+              <svg className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </span>
+          </MagneticButton>
+
+          <MagneticButton
             href="mailto:ajay.sahuchitrakoot@gmail.com"
             className="group px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-base hover:bg-white/5 hover:border-violet-400/50 transition-all duration-300"
           >
@@ -221,7 +234,7 @@ export default function Hero() {
           transition={{ delay: 1.2 }}
           className="flex flex-wrap justify-center gap-2"
         >
-          {["React.js", "Next.js", "TypeScript", "Redux", "Tailwind CSS"].map((tech, i) => (
+          {["React.js", "Next.js", "TypeScript", "Redux Toolkit", "Tailwind CSS"].map((tech, i) => (
             <motion.span
               key={tech}
               initial={{ opacity: 0, scale: 0.8 }}

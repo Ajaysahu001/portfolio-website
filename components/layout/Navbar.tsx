@@ -152,6 +152,20 @@ export default function Navbar() {
               </motion.button>
             )}
 
+            {/* Download CV */}
+            <motion.a
+              href="/Ajay_3Exp_React_Resume.pdf"
+              download
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full border border-violet-500/40 text-violet-300 text-sm font-medium hover:bg-violet-500/10 hover:border-violet-400 transition-all"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              <span>CV</span>
+            </motion.a>
+
             {/* CTA */}
             <motion.a
               href="mailto:ajay.sahuchitrakoot@gmail.com"
@@ -211,7 +225,17 @@ export default function Navbar() {
                 {link.label}
               </motion.button>
             ))}
-            <div className="mt-3 pt-3 border-t border-white/10">
+            <div className="mt-3 pt-3 border-t border-white/10 space-y-2">
+              <a
+                href="/Ajay_3Exp_React_Resume.pdf"
+                download
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-violet-500/40 text-violet-300 font-medium hover:bg-violet-500/10 transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download CV
+              </a>
               <a
                 href="mailto:ajay.sahuchitrakoot@gmail.com"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 text-white font-medium"
