@@ -25,15 +25,24 @@ export default function SchemaMarkup() {
       addressCountry: "IN",
     },
     knowsAbout: [
-      "React.js",
-      "Next.js",
-      "JavaScript",
-      "TypeScript",
-      "Redux",
-      "Tailwind CSS",
-      "RESTful APIs",
-      "Performance Optimization",
-      "Front-end Development",
+      "React.js", "Next.js", "JavaScript", "TypeScript",
+      "Redux Toolkit", "Context API", "Tailwind CSS", "SCSS",
+      "RESTful APIs", "Axios", "Figma", "Webpack", "Vite", "Babel",
+      "Node.js", "Express.js", "MongoDB", "MERN Stack",
+      "Lazy Loading", "Code Splitting", "Memoization", "SSR", "SSG",
+      "Agile", "Scrum", "Front-end Development",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "Full-Stack Web Development (MERN Stack)",
+        credentialCategory: "certificate",
+        recognizedBy: {
+          "@type": "Organization",
+          name: "Ducat India",
+          address: { "@type": "PostalAddress", addressLocality: "Noida", addressRegion: "Uttar Pradesh" },
+        },
+      },
     ],
     alumniOf: education.map((edu) => ({
       "@type": "EducationalOrganization",
@@ -55,7 +64,7 @@ export default function SchemaMarkup() {
         name: "Ahmedabad",
         containedInPlace: { "@type": "Country", name: "India" },
       },
-      skills: "React.js, Next.js, Redux, Tailwind CSS, TypeScript, JavaScript",
+      skills: "React.js, Next.js, Redux Toolkit, Context API, Tailwind CSS, TypeScript, JavaScript, SCSS, Node.js, MongoDB, Express.js, RESTful APIs, Axios, Figma",
     },
   };
 

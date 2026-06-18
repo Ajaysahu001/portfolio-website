@@ -68,6 +68,17 @@ export const skills = [
       { name: "Minification", level: 80 },
     ],
   },
+  {
+    category: "MERN Stack",
+    icon: "🌿",
+    color: "from-green-500 to-emerald-600",
+    items: [
+      { name: "MongoDB", level: 70 },
+      { name: "Express.js", level: 68 },
+      { name: "Node.js", level: 72 },
+      { name: "REST API Design", level: 80 },
+    ],
+  },
 ];
 
 export const projects = [

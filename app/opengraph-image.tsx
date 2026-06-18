@@ -126,12 +126,12 @@ export default function Image() {
             marginBottom: 60,
           }}
         >
-          3+ years building high-performance web apps · Redux · TypeScript · Tailwind CSS
+          3+ years building high-performance web apps · Redux Toolkit · TypeScript · MERN Stack
         </div>
 
         {/* Tech pills row */}
         <div style={{ display: "flex", gap: 12 }}>
-          {["React.js", "Next.js", "TypeScript", "Redux", "Tailwind CSS"].map(
+          {["React.js", "Next.js", "Redux Toolkit", "TypeScript", "MERN Stack"].map(
             (tech) => (
               <div
                 key={tech}

@@ -59,6 +59,9 @@ const techStack = [
   { name: "SCSS", color: "#CC6699" },
   { name: "Axios", color: "#5A29E4" },
   { name: "Bootstrap", color: "#7952B3" },
+  { name: "Node.js", color: "#339933" },
+  { name: "Express.js", color: "#ffffff" },
+  { name: "MongoDB", color: "#47A248" },
 ];
 
 export default function Skills() {
