@@ -4,7 +4,7 @@ export const personalInfo = {
   tagline: "Crafting exceptional digital experiences",
   avatar: "",
   summary:
-    "Front-end Developer with 3+ years of experience building responsive and high-performance web applications using React.js and Next.js. Expertise in state management (Redux, Context API), RESTful API integration, and UI performance optimization. Delivered production-grade UIs across multiple live client products, working in Agile teams with designers and back-end developers.",
+    "Front-end Developer with 3+ years of experience building responsive and high-performance web applications using React.js and Next.js. Expertise in Redux Toolkit, Context API, TypeScript, and RESTful API integration — with hands-on MERN Stack experience. Delivered production-grade UIs across multiple live client products, working in Agile teams with designers and back-end developers.",
   email: "ajay.sahuchitrakoot@gmail.com",
   phone: "+91-8840418726",
   location: "Chitrakoot, M.P., India",
@@ -14,6 +14,8 @@ export const personalInfo = {
     "Front-end Developer",
     "React.js Expert",
     "Next.js Developer",
+    "Full Stack Developer",
+    "MERN Stack Developer",
     "UI/UX Enthusiast",
     "Performance Optimizer",
   ],
@@ -77,6 +79,17 @@ export const skills = [
       { name: "Express.js", level: 68 },
       { name: "Node.js", level: 72 },
       { name: "REST API Design", level: 80 },
+    ],
+  },
+  {
+    category: "AI & Automation",
+    icon: "🤖",
+    color: "from-pink-500 to-purple-600",
+    items: [
+      { name: "Gemini AI API", level: 78 },
+      { name: "Prompt Engineering", level: 80 },
+      { name: "AI Integration", level: 75 },
+      { name: "OpenAI API", level: 70 },
     ],
   },
 ];
@@ -147,6 +160,72 @@ export const projects = [
     ],
     keywords: ["React.js", "Context API", "lazy loading", "space management", "REST API"],
     datePublished: "2024-03-01",
+  },
+  {
+    title: "Luxora",
+    slug: "luxora",
+    description:
+      "A full-stack e-commerce platform built on the MERN stack. Features JWT authentication, product management, cart & checkout flow, order tracking, and an admin dashboard for inventory control.",
+    longDescription:
+      "Luxora is a full-featured e-commerce platform built end-to-end with the MERN stack. The Node.js and Express.js backend powers a secure REST API with JWT authentication, protected admin routes, and Mongoose schemas for products, orders, and users in MongoDB. The React.js frontend uses Redux Toolkit to manage cart state, user sessions, and order history across the app. Key features include product listing with search and filter, add-to-cart with quantity management, a multi-step checkout flow with order summary, and a dedicated admin dashboard for managing inventory and order statuses. Tailwind CSS delivers a clean, fully responsive UI across all devices.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js", "Redux Toolkit", "JWT"],
+    color: "from-green-600 to-emerald-600",
+    accentColor: "emerald",
+    icon: "◉",
+    link: "#",
+    github: "https://github.com/Ajaysahu001",
+    highlights: [
+      "Full MERN stack",
+      "JWT authentication",
+      "Cart & checkout flow",
+      "Admin dashboard",
+    ],
+    keywords: ["MERN Stack", "MongoDB", "Express.js", "Node.js", "React.js", "Redux Toolkit", "JWT", "e-commerce", "full-stack"],
+    datePublished: "2025-10-01",
+  },
+  {
+    title: "SmartChat AI",
+    slug: "smartchat-ai",
+    description:
+      "A real-time AI chatbot interface built with Next.js and OpenAI API. Features streaming responses, conversation history, multi-session support, and a clean chat UI — delivering a ChatGPT-like experience in the browser.",
+    longDescription:
+      "SmartChat AI is a conversational AI assistant built with Next.js App Router and the OpenAI API. The app streams responses token-by-token using the Vercel AI SDK, giving users an instant, fluid chat experience without waiting for full responses. Redux Toolkit manages multiple conversation sessions, allowing users to switch between chats and preserve history across page refreshes via localStorage. The UI features a clean message thread layout with user/assistant bubbles, a sticky input bar with send-on-Enter support, typing indicators, and markdown rendering for code blocks. Tailwind CSS delivers a polished dark-mode interface across all screen sizes.",
+    tech: ["Next.js", "OpenAI API", "Redux Toolkit", "Tailwind CSS", "Vercel AI SDK"],
+    color: "from-sky-600 to-indigo-600",
+    accentColor: "sky",
+    icon: "◎",
+    link: "#",
+    github: "https://github.com/Ajaysahu001",
+    highlights: [
+      "Streaming AI responses",
+      "Multi-session history",
+      "Markdown code rendering",
+      "ChatGPT-like UX",
+    ],
+    keywords: ["AI chatbot", "OpenAI API", "Next.js", "streaming", "Redux Toolkit", "conversational AI"],
+    datePublished: "2026-05-01",
+  },
+  {
+    title: "AI Content Studio",
+    slug: "ai-content-studio",
+    description:
+      "An AI-powered content generation tool built with React.js and Next.js. Integrates Gemini AI API to automate blog writing, email drafting, and social media copy — reducing content creation time by 70%.",
+    longDescription:
+      "AI Content Studio is a productivity tool that brings AI-powered automation to content creation workflows. Built with Next.js App Router and React.js on the frontend, it integrates the Gemini AI API to generate high-quality blog posts, marketing emails, and social media captions from simple user prompts. Redux Toolkit manages the generation history and user preferences across sessions. The app features a clean prompt editor with real-time streaming responses, a content history sidebar, copy-to-clipboard functionality, and tone/length controls. Tailwind CSS delivers a polished, responsive interface that works seamlessly across devices. The result is a tool that cuts content creation time by up to 70%.",
+    tech: ["Next.js", "React.js", "Gemini AI API", "Redux Toolkit", "Tailwind CSS"],
+    color: "from-purple-600 to-pink-600",
+    accentColor: "purple",
+    icon: "✳",
+    link: "#",
+    github: "https://github.com/Ajaysahu001",
+    highlights: [
+      "Gemini AI integration",
+      "70% faster content",
+      "Real-time streaming",
+      "Prompt-to-content",
+    ],
+    keywords: ["AI automation", "Gemini API", "Next.js", "React.js", "content generation", "Redux Toolkit", "AI tool"],
+    datePublished: "2026-03-01",
   },
 ];
 

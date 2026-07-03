@@ -8,7 +8,7 @@ export const siteConfig = {
   title: "Ajay Sahu — Front-end Developer | React.js & Next.js Expert",
   shortTitle: "Ajay Sahu",
   description:
-    "Front-end Developer with 3+ years of experience building high-performance, responsive web applications using React.js and Next.js. Expert in Redux Toolkit, Context API, Tailwind CSS, TypeScript, and RESTful API integration. MERN Stack trained.",
+    "Front-end Developer with 3+ years of experience building high-performance, responsive web applications using React.js and Next.js. Expert in Redux Toolkit, Context API, TypeScript, and RESTful API integration — with hands-on MERN Stack experience.",
   tagline: "Crafting exceptional digital experiences",
   locale: "en_IN",
   twitterHandle: "@ajaysahu001",

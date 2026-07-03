@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/5 py-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-violet-950/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-t from-violet-950/20 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,7 +13,7 @@ export default function Footer() {
           viewport={{ once: true }}
           className="text-center md:text-left"
         >
-          <span className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+          <span className="text-2xl font-bold bg-linear-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
             Ajay Sahu
           </span>
           <p className="text-white/40 text-sm mt-1">Front-end Developer</p>
